@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<head>
+  <title>Is this movie a rom-com?</title>
+</head>
+
+<body>
+
+  <ul>
+  {% for movie in movies %}
+    <li>{{ movie.title }}</li>
+  {% endfor %}
+  </ul>
+
+</body>
