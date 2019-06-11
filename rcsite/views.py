@@ -8,5 +8,6 @@ class IndexView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['movies'] = Movie.objects.all()
+        context['yes'] = Movie.objects.filter(answer=True)
+        context['no'] = Movie.objects.filter(answer=False)
         return context

@@ -7,8 +7,16 @@
 
 <body>
 
+  <h1>Movies That Are Rom-coms</h2>
   <ul>
-  {% for movie in movies %}
+  {% for movie in yes %}
+    <li>{{ movie.title }}</li>
+  {% endfor %}
+  </ul>
+
+  <h1>Movies That Are Not Rom-coms</h2>
+  <ul>
+  {% for movie in no %}
     <li>{{ movie.title }}</li>
   {% endfor %}
   </ul>
